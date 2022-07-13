@@ -10,15 +10,6 @@ const client = new Discord.Client({
   fetchAllMembers: true
 })
 
-
-app.get('/', (request, response) => {
-     response.sendStatus(200);
-});
-
-let listener = app.listen(process.env.PORT, () => {
-     console.log('Your app is currently listening on port: ' + listener.address().port);
-});
-
 roblox.setCookie(process.env.cookie).catch(async err => {
     console.log(chalk.red('Issue with logging in: ' + err));
 });
